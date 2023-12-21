@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cml0rob6pjc3w"]
+
+[ext_resource type="Script" path="res://Scripts/server_menu.gd" id="1_2hw84"]
+
+[node name="ServerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420.0
+offset_bottom = 164.0
+script = ExtResource("1_2hw84")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ServerButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Start a server"
+
+[node name="ClientButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Join a server"
+
+[connection signal="pressed" from="HBoxContainer/ServerButton" to="." method="_on_local_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ServerButton" to="." method="_on_server_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ClientButton" to="." method="_on_client_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ClientButton" to="." method="_on_online_button_pressed"]

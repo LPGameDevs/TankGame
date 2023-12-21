@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SyncManager="*res://addons/godot-rollback-netcode/SyncManager.gd"
+SignalManager="*res://Singletons/SignalManager.gd"
+ServerMessages="*res://Singletons/ServerMessages.gd"
 
 [editor_plugins]
 

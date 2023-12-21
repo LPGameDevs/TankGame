@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8rjor1lfc6rr"]
+
+[ext_resource type="Script" path="res://Scripts/online_menu.gd" id="1_dfufx"]
+
+[node name="OnlineMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420.0
+offset_bottom = 164.0
+script = ExtResource("1_dfufx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LocalButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Play Locally"
+
+[node name="OnlineButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Play Online"
+
+[connection signal="pressed" from="HBoxContainer/LocalButton" to="." method="_on_local_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/OnlineButton" to="." method="_on_online_button_pressed"]

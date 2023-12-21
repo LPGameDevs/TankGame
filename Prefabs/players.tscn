@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ex0xl1wimpf1" path="res://icon.svg" id="1_cf3lp"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_wmfof"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" groups=["network_sync"]]
 script = ExtResource("1_wmfof")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
